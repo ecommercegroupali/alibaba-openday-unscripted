@@ -276,29 +276,15 @@
     .leader-card { flex-direction: column; align-items: center; text-align: center; }
   }
 
-  /* ===== LEADER PHOTO SPRITES ===== */
   .leader-photo {
     width: 110px;
     height: 110px;
     min-width: 110px;
     border-radius: 50%;
-    background-image: url('images/leaders-poster.jpg');
-    background-size: 400px auto;
-    background-repeat: no-repeat;
+    object-fit: cover;
     border: 2px solid rgba(139,92,246,0.25);
     box-shadow: 0 4px 20px rgba(0,0,0,0.4);
   }
-  /* Poster: 1876x32854, 8 panels, panel=4106.75px.
-     At bg-size 400px: scaled height=7009px, panel=876.2px.
-     Photo face center ~15% into each panel. */
-  .photo-liu-bo       { background-position: -17px -79px; }
-  .photo-kuo-zhang    { background-position: -17px -955px; }
-  .photo-zheng-bo     { background-position: -17px -1831px; }
-  .photo-lily-yan     { background-position: -17px -2707px; }
-  .photo-wang-tingxiang { background-position: -17px -3583px; }
-  .photo-ding-jian    { background-position: -17px -4460px; }
-  .photo-cao-jiayin   { background-position: -17px -5336px; }
-  .photo-lillian-jiang { background-position: -17px -6212px; }
 
   .leader-info {
     flex: 1;
@@ -556,7 +542,7 @@
   </h2>
 
   <div class="leader-card reveal reveal-delay-1">
-    <div class="leader-photo photo-zheng-bo"></div>
+    <img class="leader-photo" src="images/zheng-bo.png" alt="Bo Zheng">
     <div class="leader-info">
     <div class="leader-name">Zheng Bo (Bo Zheng)</div>
     <div class="leader-title">CTO, Taotian Group &middot; Architect of Happy Horse</div>
@@ -570,7 +556,7 @@
   </div>
 
   <div class="leader-card reveal reveal-delay-2">
-    <div class="leader-photo photo-kuo-zhang"></div>
+    <img class="leader-photo" src="images/kuo-zhang.png" alt="Kuo Zhang">
     <div class="leader-info">
     <div class="leader-name">Zhang Kuo (Kuo Zhang)</div>
     <div class="leader-title">President, Alibaba.com</div>
@@ -584,7 +570,7 @@
   </div>
 
   <div class="leader-card reveal reveal-delay-3">
-    <div class="leader-photo photo-lily-yan"></div>
+    <img class="leader-photo" src="images/lily-yan.png" alt="Lily Yan">
     <div class="leader-info">
     <div class="leader-name">Lily Yan (Yan Xiaolei)</div>
     <div class="leader-title">CEO, Freshippo (Hema)</div>
@@ -596,7 +582,7 @@
   </div>
 
   <div class="leader-card reveal reveal-delay-4">
-    <div class="leader-photo photo-liu-bo"></div>
+    <img class="leader-photo" src="images/liu-bo.png" alt="Bo Liu">
     <div class="leader-info">
     <div class="leader-name">Bo Liu (Liu Bo)</div>
     <div class="leader-title">Leader, Tmall &middot; Alimama &middot; Taobao Live</div>
@@ -609,9 +595,9 @@
 
   <div class="leader-card reveal reveal-delay-4">
     <div style="display:flex;gap:8px;flex-shrink:0;">
-      <div class="leader-photo photo-wang-tingxiang" style="width:80px;height:80px;min-width:80px;"></div>
-      <div class="leader-photo photo-ding-jian" style="width:80px;height:80px;min-width:80px;"></div>
-      <div class="leader-photo photo-cao-jiayin" style="width:80px;height:80px;min-width:80px;"></div>
+      <img class="leader-photo" src="images/wang-tingxiang.png" alt="Tingxiang Wang" style="width:80px;height:80px;min-width:80px;">
+      <img class="leader-photo" src="images/ding-jian.png" alt="Ding Jian" style="width:80px;height:80px;min-width:80px;">
+      <img class="leader-photo" src="images/cao-jiayin.png" alt="Jiayin Cao" style="width:80px;height:80px;min-width:80px;">
     </div>
     <div class="leader-info">
     <div class="leader-name">Tingxiang Wang, Ding Jian, Cao Jiayin</div>
@@ -624,7 +610,7 @@
   </div>
 
   <div class="leader-card reveal reveal-delay-4">
-    <div class="leader-photo photo-lillian-jiang"></div>
+    <img class="leader-photo" src="images/lillian-jiang.png" alt="Lillian Jiang">
     <div class="leader-info">
     <div class="leader-name">Lillian Jiang</div>
     <div class="leader-title">CPO, Alibaba E-Commerce Business Group</div>
