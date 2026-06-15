@@ -257,6 +257,9 @@
   }
 
   .leader-card {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
     padding: 36px 32px;
     background: rgba(255,255,255,0.02);
     border: 1px solid rgba(255,255,255,0.05);
@@ -268,6 +271,38 @@
     border-color: rgba(139,92,246,0.25);
     background: rgba(255,255,255,0.035);
     transform: translateY(-2px);
+  }
+  @media (max-width: 600px) {
+    .leader-card { flex-direction: column; align-items: center; text-align: center; }
+  }
+
+  /* ===== LEADER PHOTO SPRITES ===== */
+  .leader-photo {
+    width: 110px;
+    height: 110px;
+    min-width: 110px;
+    border-radius: 50%;
+    background-image: url('images/leaders-poster.jpg');
+    background-size: 400px auto;
+    background-repeat: no-repeat;
+    border: 2px solid rgba(139,92,246,0.25);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
+  /* Poster: 1876x32854, 8 panels, panel=4106.75px.
+     At bg-size 400px: scaled height=7009px, panel=876.2px.
+     Photo face center ~15% into each panel. */
+  .photo-liu-bo       { background-position: -17px -79px; }
+  .photo-kuo-zhang    { background-position: -17px -955px; }
+  .photo-zheng-bo     { background-position: -17px -1831px; }
+  .photo-lily-yan     { background-position: -17px -2707px; }
+  .photo-wang-tingxiang { background-position: -17px -3583px; }
+  .photo-ding-jian    { background-position: -17px -4460px; }
+  .photo-cao-jiayin   { background-position: -17px -5336px; }
+  .photo-lillian-jiang { background-position: -17px -6212px; }
+
+  .leader-info {
+    flex: 1;
+    min-width: 0;
   }
   .leader-name {
     font-size: 22px;
@@ -521,6 +556,8 @@
   </h2>
 
   <div class="leader-card reveal reveal-delay-1">
+    <div class="leader-photo photo-zheng-bo"></div>
+    <div class="leader-info">
     <div class="leader-name">Zheng Bo (Bo Zheng)</div>
     <div class="leader-title">CTO, Taotian Group &middot; Architect of Happy Horse</div>
     <div class="leader-bio">
@@ -529,9 +566,12 @@
       <span class="hook">It was his team. Come ask him the backstory — and what "Happy Horse" actually means. Also the mind behind "Happy Oyster" and Token Fundary.</span>
     </div>
     <div class="leader-bio-cn">淘天集团CTO，"Happy Horse"和"Happy Oyster"的技术架构师——今年初一个匿名AI视频模型横扫所有榜单，全球AI社区花了几周猜测背后团队，就是他。</div>
+    </div>
   </div>
 
   <div class="leader-card reveal reveal-delay-2">
+    <div class="leader-photo photo-kuo-zhang"></div>
+    <div class="leader-info">
     <div class="leader-name">Zhang Kuo (Kuo Zhang)</div>
     <div class="leader-title">President, Alibaba.com</div>
     <div class="leader-bio">
@@ -540,42 +580,59 @@
       <span class="hook">Ask him about the "one-person company" wave: 30–40% of his platform's customers are now solo entrepreneurs powered entirely by AI. What does that mean for the future of work?</span>
     </div>
     <div class="leader-bio-cn">阿里国际站总裁，领导着1999年创立的阿里巴巴原平台近十年。服务200个国家5000万企业的全球B2B市场，正从底层被AI（Accio Work）重新定义。</div>
+    </div>
   </div>
 
   <div class="leader-card reveal reveal-delay-3">
+    <div class="leader-photo photo-lily-yan"></div>
+    <div class="leader-info">
     <div class="leader-name">Lily Yan (Yan Xiaolei)</div>
     <div class="leader-title">CEO, Freshippo (Hema)</div>
     <div class="leader-bio">
       She's reimagining grocery retail with AI — where <strong>prediction errors aren't academic; they're measured in tons of spoiled salmon</strong>. If you think AI in the real world is just chatbots, she'll change your mind.
     </div>
     <div class="leader-bio-cn">盒马CEO，用AI重塑生鲜零售——预测误差不是论文里的数字，是按吨计算的三文鱼损耗。</div>
+    </div>
   </div>
 
   <div class="leader-card reveal reveal-delay-4">
+    <div class="leader-photo photo-liu-bo"></div>
+    <div class="leader-info">
     <div class="leader-name">Bo Liu (Liu Bo)</div>
     <div class="leader-title">Leader, Tmall &middot; Alimama &middot; Taobao Live</div>
     <div class="leader-bio">
       Commerce at planetary scale: <strong>900M+ monthly active users</strong>, AI-powered search that understands "what should I wear to my ex's wedding," and a live-streaming commerce engine that processes more transactions in an hour than most startups do in a year.
     </div>
     <div class="leader-bio-cn">天猫、阿里妈妈、淘宝直播负责人。9亿月活用户，AI驱动的搜索引擎和直播电商。</div>
+    </div>
   </div>
 
   <div class="leader-card reveal reveal-delay-4">
+    <div style="display:flex;gap:8px;flex-shrink:0;">
+      <div class="leader-photo photo-wang-tingxiang" style="width:80px;height:80px;min-width:80px;"></div>
+      <div class="leader-photo photo-ding-jian" style="width:80px;height:80px;min-width:80px;"></div>
+      <div class="leader-photo photo-cao-jiayin" style="width:80px;height:80px;min-width:80px;"></div>
+    </div>
+    <div class="leader-info">
     <div class="leader-name">Tingxiang Wang, Ding Jian, Cao Jiayin</div>
     <div class="leader-title">Business Line Leaders, Taotian Group</div>
     <div class="leader-bio">
       The leaders behind <strong>fast fashion, recommendation systems, and business strategy</strong> at platforms processing billions of AI-powered requests daily. They manage the algorithms that decide what a billion people see when they open their phones.
     </div>
     <div class="leader-bio-cn">淘天集团快时尚、推荐事业部及业务战略负责人。管理着每天处理数十亿AI请求的推荐算法。</div>
+    </div>
   </div>
 
   <div class="leader-card reveal reveal-delay-4">
+    <div class="leader-photo photo-lillian-jiang"></div>
+    <div class="leader-info">
     <div class="leader-name">Lillian Jiang</div>
     <div class="leader-title">CPO, Alibaba E-Commerce Business Group</div>
     <div class="leader-bio">
       She designs the <strong>talent and organizational architecture</strong> for a company operating at planetary scale. She's eager to hear fresh ideas from students and happy to answer questions about personal growth, career paths, and how a large organization evolves in the AI era.
     </div>
     <div class="leader-bio-cn">阿里巴巴电商事业群CPO，负责人才与组织架构设计。她期待与同学们交流新鲜想法，也乐于回答关于个人成长、职业发展以及大型组织如何在AI时代进化等问题。</div>
+    </div>
   </div>
 </section>
 
